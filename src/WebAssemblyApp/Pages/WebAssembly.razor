@@ -1,0 +1,100 @@
+@page "/webassembly"
+
+<PageTitle>WebAssembly</PageTitle>
+
+<h1>WebAssembly
+    <small class="text-muted">in modern web browsers</small>
+</h1>
+
+<p role="status">Total interactions: @currentCount</p>
+
+<div class="accordion" id="webassembly-accordion">
+  <div class="accordion-item" onclick="@IncrementCount">
+    <h2 class="accordion-header" id="webassembly-heading-one">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#webassembly-collapse-one" aria-expanded="false" aria-controls="webassembly-collapse-one">
+        @GetQuestion("what-is")
+      </button>
+    </h2>
+    <div id="webassembly-collapse-one" class="accordion-collapse collapse" aria-labelledby="webassembly-heading-one" data-bs-parent="#webassembly-accordion">
+      <div class="accordion-body">
+        @GetAnswer("what-is")
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item" onclick="@IncrementCount">
+    <h2 class="accordion-header" id="webassembly-heading-two">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#webassembly-collapse-two" aria-expanded="false" aria-controls="webassembly-collapse-two">
+        @GetQuestion("languages-supported")
+      </button>
+    </h2>
+    <div id="webassembly-collapse-two" class="accordion-collapse collapse" aria-labelledby="webassembly-heading-two" data-bs-parent="#webassembly-accordion">
+      <div class="accordion-body">
+        @GetAnswer("languages-supported")
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item" onclick="@IncrementCount">
+    <h2 class="accordion-header" id="webassembly-heading-three">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#webassembly-collapse-three" aria-expanded="false" aria-controls="webassembly-collapse-three">
+        @GetQuestion("why-created")
+      </button>
+    </h2>
+    <div id="webassembly-collapse-three" class="accordion-collapse collapse" aria-labelledby="webassembly-heading-three" data-bs-parent="#webassembly-accordion">
+      <div class="accordion-body">
+        @GetAnswer("why-created")
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item" onclick="@IncrementCount">
+    <h2 class="accordion-header" id="webassembly-heading-four">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#webassembly-collapse-four" aria-expanded="false" aria-controls="webassembly-collapse-four">
+        @GetQuestion("browsers-supported")
+      </button>
+    </h2>
+    <div id="webassembly-collapse-four" class="accordion-collapse collapse" aria-labelledby="webassembly-heading-four" data-bs-parent="#webassembly-accordion">
+      <div class="accordion-body">
+        @GetAnswer("browsers-supported")
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item" onclick="@IncrementCount">
+    <h2 class="accordion-header" id="webassembly-heading-five">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#webassembly-collapse-five" aria-expanded="false" aria-controls="webassembly-collapse-five">
+        @GetQuestion("what-conclusion")
+      </button>
+    </h2>
+    <div id="webassembly-collapse-five" class="accordion-collapse collapse" aria-labelledby="webassembly-heading-five" data-bs-parent="#webassembly-accordion">
+      <div class="accordion-body">
+        @GetAnswer("what-conclusion")
+      </div>
+    </div>
+  </div>
+</div>
+
+@code {
+  private int currentCount;
+
+  private readonly IDictionary<string, Tuple<string, string>> webAssemblyData = new Dictionary<string, Tuple<string, string>>()
+  {
+    { "what-is", new Tuple<string, string>("What is WebAssembly?", "WebAssembly is a low-level assembly-like near-native performance language that can be run in modern web browsers, designed as a portable target for compilation of high-level languages like C# or Java, and plays nicely with other technologies in the web platform.") },
+    { "languages-supported", new Tuple<string, string>("What languages does WebAssembly support?", "C#, Java, TypeScript, Go, Rust, among others.") },
+    { "why-created", new Tuple<string, string>("Why was WebAssembly created?", "It’s all about performance! WebAssembly was created as a complement to the current web platform, can communicate with JavaScript, has text-based format for developers and binary format to promote other compilers and tools targeting WebAssembly.") },
+    { "browsers-supported", new Tuple<string, string>("What browsers support WebAssembly?", "Firefox, Chrome, Edge, Safari.") },
+    { "what-conclusion", new Tuple<string, string>("What's the conclusion?", "WebAssembly will play an important role in the web platform for the coming years, open so many possibilities to enhance web performance, writing web apps in multiple programming languages alongside JavaScript, and can become an universal compilation target even outside the web.") }
+  };
+
+  private string GetQuestion(string key)
+  {
+    return webAssemblyData[key].Item1;
+  }
+
+  private string GetAnswer(string key)
+  {
+    return webAssemblyData[key].Item2;
+  }
+
+  private void IncrementCount()
+  {
+    currentCount++;
+  }
+}
