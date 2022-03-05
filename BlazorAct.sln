@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7C677A6B-8AB1-4073-A0EE-1A5E3C0DFAC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAssemblyApp", "src\WebAssemblyApp\WebAssemblyApp.csproj", "{DDFC1C0A-B892-476C-AE8E-7B41D2ECDDF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DDFC1C0A-B892-476C-AE8E-7B41D2ECDDF5} = {7C677A6B-8AB1-4073-A0EE-1A5E3C0DFAC8}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDFC1C0A-B892-476C-AE8E-7B41D2ECDDF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDFC1C0A-B892-476C-AE8E-7B41D2ECDDF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDFC1C0A-B892-476C-AE8E-7B41D2ECDDF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDFC1C0A-B892-476C-AE8E-7B41D2ECDDF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
