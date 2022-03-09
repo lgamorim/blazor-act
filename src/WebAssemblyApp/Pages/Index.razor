@@ -3,9 +3,11 @@
 
 <PageTitle>The Blazor Act</PageTitle>
 
-<h1>Blazor</h1>
+<h3>Blazor<small class="text-muted"> Building interactive web UIs with C#</small></h3>
 
-<p class="lead">Building interactive web UIs with C#.</p>
+<div class="mt-5">
+  <p>Blazor lets you build interactive web UIs using C# instead of JavaScript.</p>
+</div>
 
 <div class="accordion" id="webassembly-accordion">
   <div class="accordion-item">
@@ -45,6 +47,8 @@
     </div>
   </div>
 </div>
+
+<Offcanvas/>
 
 @code {
   private IDictionary<string, Tuple<string, string>> overviewData;
