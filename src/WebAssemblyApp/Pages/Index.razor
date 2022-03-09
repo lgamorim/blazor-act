@@ -53,7 +53,7 @@
 
   protected override async Task OnInitializedAsync()
   {
-    overviewData = await Http.GetFromJsonAsync<IDictionary<string, Tuple<string, string>>>("sample-data/overview.json");
+    overviewData = await Http.GetFromJsonAsync<IDictionary<string, Tuple<string, string>>>("sample-data/Index.json");
   }
 
   private string GetHeading(string key)
