@@ -1,0 +1,7 @@
+﻿[
+  {"Item1":"What is WebAssembly?","Item2":"WebAssembly is a low-level assembly-like near-native performance language that can be run in modern web browsers, designed as a portable target for compilation of high-level languages like C# or Java, and plays nicely with other technologies in the web platform."},
+  {"Item1":"What languages does WebAssembly support?","Item2":"C#, Java, TypeScript, Go, Rust, among others."},
+  {"Item1":"Why was WebAssembly created?","Item2":"It\u2019s all about performance! WebAssembly was created as a complement to the current web platform, can communicate with JavaScript, has text-based format for developers and binary format to promote other compilers and tools targeting WebAssembly."},
+  {"Item1":"What browsers support WebAssembly?","Item2":"Firefox, Chrome, Edge, Safari."},
+  {"Item1":"What\u0027s the conclusion?","Item2":"WebAssembly will play an important role in the web platform for the coming years, open so many possibilities to enhance web performance, writing web apps in multiple programming languages alongside JavaScript, and can become an universal compilation target even outside the web."}
+]

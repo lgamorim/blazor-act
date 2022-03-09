@@ -1,48 +1,44 @@
 @page "/webassembly"
+@inject HttpClient Http
 
-<PageTitle>WebAssembly</PageTitle>
+<PageTitle>WebAssembly | The Blazor Act</PageTitle>
 
 <h3>WebAssembly<small class="text-muted"> in modern web browsers</small></h3>
 
-<div class="mt-5">
-  <p>Blazor can run your client-side C# code directly in the browser, using WebAssembly.</p>
-</div>
+<Pin InnerText="Blazor can run your client-side C# code directly in the browser, using WebAssembly."></Pin>
 
 <div class="accordion" id="webassembly-accordion">
-@for(var i = 0; i < webAssemblyData.Count; i++)
+@for(var i = 0; i < webAssemblyData?.Count; i++)
 {
   <div class="accordion-item" onclick="@IncrementClicks">
     <h2 class="accordion-header" id="webassembly-heading-@i">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#webassembly-collapse-@i" aria-expanded="false" aria-controls="webassembly-collapse-@i">
-        @webAssemblyData[i].Item1
+        @webAssemblyData?[i].Item1
       </button>
     </h2>
     <div id="webassembly-collapse-@i" class="accordion-collapse collapse" aria-labelledby="webassembly-heading-@i" data-bs-parent="#webassembly-accordion">
       <div class="accordion-body">
-        @webAssemblyData[i].Item2
+        @webAssemblyData?[i].Item2
       </div>
     </div>
   </div>
 }
 </div>
 
-<div class="mt-1">
-  <p role="status">Clicks so far: <span class="badge bg-secondary">@totalClicks</span></p>
+<div class="mt-3">
+  <p role="status">Total clicks so far: <span class="badge bg-secondary">@totalClicks</span></p>
 </div>
 
 <Offcanvas/>
 
 @code {
+  private IList<Tuple<string, string>> webAssemblyData;
   private int totalClicks;
 
-  private readonly IList<Tuple<string, string>> webAssemblyData = new List<Tuple<string, string>>()
+  protected override async Task OnInitializedAsync()
   {
-    new("What is WebAssembly?", "WebAssembly is a low-level assembly-like near-native performance language that can be run in modern web browsers, designed as a portable target for compilation of high-level languages like C# or Java, and plays nicely with other technologies in the web platform."),
-    new("What languages does WebAssembly support?", "C#, Java, TypeScript, Go, Rust, among others."),
-    new("Why was WebAssembly created?", "It’s all about performance! WebAssembly was created as a complement to the current web platform, can communicate with JavaScript, has text-based format for developers and binary format to promote other compilers and tools targeting WebAssembly."),
-    new("What browsers support WebAssembly?", "Firefox, Chrome, Edge, Safari."),
-    new("What's the conclusion?", "WebAssembly will play an important role in the web platform for the coming years, open so many possibilities to enhance web performance, writing web apps in multiple programming languages alongside JavaScript, and can become an universal compilation target even outside the web.")
-  };
+    webAssemblyData = await Http.GetFromJsonAsync<IList<Tuple<string, string>>>("sample-data/WebAssembly.json");
+  }
 
   private void IncrementClicks()
   {
