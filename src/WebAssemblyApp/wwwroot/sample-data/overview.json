@@ -5,7 +5,7 @@
   },
   "project-structure": {
     "Item1": "App/Demo structure",
-    "Item2": "<p>Let's take a look at the structure of this Blazor app/demo.</p><ul><li>WebAssembly in modern web browsers.</li><li>Writing client-side C# code.</li><li>Sharing code and libraries with .NET Standard.</li><li>Interoperability with JavaScript.</li></ul>"
+    "Item2": "<p>Let's take a look at the structure of this Blazor app to understand how the demo will unfold.</p><ul><li><mark>WebAssembly</mark> in modern web browsers.</li><li>Writing <mark>client-side</mark> C# code.</li><li>Sharing code and libraries with <mark>.NET Standard</mark>.</li><li>Interoperability with <mark>JavaScript</mark>.</li></ul>"
   },
   "blazor-flavors": {
     "Item1": "Flavors of Blazor",
