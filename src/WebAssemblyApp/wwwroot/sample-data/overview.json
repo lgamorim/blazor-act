@@ -1,14 +1,14 @@
 ﻿{
   "requirements": {
     "Item1": "Requirements",
-    "Item2": "<ul class='list-unstyled'><li>Basic knowledge of <strong>HTML</strong> and <strong>CSS</strong> (Bootstrap).</li><li>Familiarity with <strong>C#</strong>.</li><li>Some <strong>Razor</strong> knowledge.</li></ul>"
+    "Item2": "<p>Blazor apps are composed of reusable web UI components implemented using C#, HTML, and CSS.</p><ul><li>Basic knowledge of <mark>HTML</mark> and <mark>CSS</mark> (Bootstrap).</li><li>Familiarity with <mark>C#</mark>.</li><li>Some <mark>Razor</mark> knowledge.</li></ul>"
   },
   "project-structure": {
-    "Item1": "Project structure",
-    "Item2": "<ul class='list-unstyled'><li><strong>WebAssembly</strong> in modern web browsers.</li><li>Writing <strong>client-side C#</strong> code.</li><li>Sharing code and libraries with <strong>.NET Standard.</strong></li><li>Interoperability with <strong>JavaScript</strong>.</li></ul>"
+    "Item1": "App/Demo structure",
+    "Item2": "<p>Let's take a look at the structure of this Blazor app/demo.</p><ul><li>WebAssembly in modern web browsers.</li><li>Writing client-side C# code.</li><li>Sharing code and libraries with .NET Standard.</li><li>Interoperability with JavaScript.</li></ul>"
   },
   "blazor-flavors": {
     "Item1": "Flavors of Blazor",
-    "Item2": "<ul class='list-unstyled'><li>Client-side (Blazor App WebAssembly).</li><li>Server-side (ASP.NET Blazor App).</li></ul>"
+    "Item2": "<p>Run on WebAssembly or the server.</p><ul><li>Blazor App WebAssembly (client-side).</li><li>ASP.NET Blazor App (server-side).</li></ul>"
   }
 }
