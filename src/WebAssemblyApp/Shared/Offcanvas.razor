@@ -8,10 +8,19 @@
       </div>
       <div class="offcanvas-body small">
         Here in this page I will learn:
+        <div class="mt-2">
+          @GetBody()
+        </div>
       </div>
     </div>
 </div>
 
 @code {
-    
+    [Parameter]
+    public string Body { get; set; }
+
+    private MarkupString GetBody()
+    {
+        return new MarkupString(Body ?? string.Empty);
+    }
 }
