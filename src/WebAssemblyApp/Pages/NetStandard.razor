@@ -1,0 +1,55 @@
+﻿@page "/netstandard"
+
+<h3>Sharing code and libraries with .NET Standard</h3>
+
+<div class="mt-5">
+  <p>The motivation behind .NET Standard was to establish greater uniformity in the .NET ecosystem.</p>
+</div>
+
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card h-100">
+      <div class="card-header">Blazor implements the .NET Standard</div>
+      <img src="/img/swimlane-blazor-ui-build.svg" class="card-img-top" alt="Blazor UI build">
+      <div class="card-body">
+        <p class="card-text">This enables Blazor projects to reference libraries that conform to .NET Standard specifications.</p>
+        <a href="https://docs.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-6.0" class="card-link" target="_blank">Tell me more</a>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Leverage the existing ecosystem of .NET libraries.</small>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card h-100">
+      <div class="card-header">One consistent API</div>
+      <img src="/img/platform.svg" class="card-img-top" alt="Platform">
+      <div class="card-body">
+        <p class="card-text">.NET Standard is a formal specification of .NET APIs that are common across .NET implementations.</p>
+        <a href="https://docs.microsoft.com/en-us/dotnet/standard/net-standard?tabs=net-standard-2-1" class="card-link" target="_blank">Tell me more</a>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">No new versions of .NET Standard will be released though.</small>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card h-100">
+      <div class="card-header">Share code and libraries</div>
+      <img src="/img/swimlane-blazor-shared-libraries.svg" class="card-img-top" alt="Blazor shared libraries">
+      <div class="card-body">
+        <p class="card-text">.NET Standard class libraries can be shared across different .NET platforms, such as Blazor, .NET Framework, and .NET Core.</p>
+        <a href="https://docs.microsoft.com/en-us/aspnet/core/blazor/?WT.mc_id=dotnet-35129-website&view=aspnetcore-6.0#code-sharing-and-net-standard" class="card-link" target="_blank">Tell me more</a>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Other platforms include Xamarin, Mono, and Unity.</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<Offcanvas/>
+
+@code {
+    
+}
