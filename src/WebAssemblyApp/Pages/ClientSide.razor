@@ -18,11 +18,11 @@
   <tbody>
   @for (var index = 0; index < clientSideFeatures.Count; index++)
   {
-    var row = index + 1;
+    var line = index + 1;
     <tr>
-      <th scope="row">@row</th>
-      <td>@clientSideFeatures[index].Item1</td>
-      <td>@clientSideFeatures[index].Item2</td>
+      <th scope="row">@line</th>
+      <td>@clientSideFeatures[index]?.Item1</td>
+      <td>@clientSideFeatures[index]?.Item2</td>
       <td><a class="btn btn-link" href="#">Show me more</a></td>
     </tr>
   }
