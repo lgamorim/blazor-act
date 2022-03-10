@@ -30,12 +30,3 @@
 </table>
 
 <Offcanvas/>
-
-@code {
-  private IList<Tuple<string, string>> clientSideFeatures = new List<Tuple<string, string>>();
-
-  protected override async Task OnInitializedAsync()
-  {
-    clientSideFeatures = await Http.GetFromJsonAsync<IList<Tuple<string, string>>>("sample-data/ClientSide.json");
-  }
-}
