@@ -1,11 +1,12 @@
 ﻿using System.Net.Http.Json;
+using BlazorAct.WebAssemblyApp.Models;
 using Microsoft.AspNetCore.Components;
 
 namespace BlazorAct.WebAssemblyApp.Pages;
 
 public partial class ClientSideFeature
 {
-    private Tuple<string, string> clientSideFeature;
+    private ClientSideFeatureDetail clientSideFeature;
 
     [Inject]
     private HttpClient Http { get; set; }
@@ -15,7 +16,7 @@ public partial class ClientSideFeature
     
     protected override async Task OnInitializedAsync()
     {
-        var clientSideFeatures = await Http.GetFromJsonAsync<IList<Tuple<string, string>>>("sample-data/ClientSide.json");
+        var clientSideFeatures = await Http.GetFromJsonAsync<IList<ClientSideFeatureDetail>>("sample-data/ClientSide.json");
         clientSideFeature = clientSideFeatures?[Index];
     }
 }
