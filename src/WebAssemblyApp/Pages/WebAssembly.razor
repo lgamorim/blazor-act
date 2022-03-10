@@ -8,22 +8,24 @@
 <Pin InnerText="Blazor can run your client-side C# code directly in the browser, using WebAssembly."></Pin>
 
 <div class="accordion" id="webassembly-accordion">
-@{ var index = 0; }
-@foreach(var entry in webAssemblyData)
-{
-  <div class="accordion-item" onclick="@IncrementClicks">
-    <h2 class="accordion-header" id="webassembly-heading-@index" @onmouseover="() => totalMouseOver++">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#webassembly-collapse-@index" aria-expanded="false" aria-controls="webassembly-collapse-@index">
-        @entry?.Item1
-      </button>
-    </h2>
-    <div id="webassembly-collapse-@index" class="accordion-collapse collapse" aria-labelledby="webassembly-heading-@index" data-bs-parent="#webassembly-accordion">
-      <div class="accordion-body">
-        @entry?.Item2
+@{
+  var line = 1;
+  foreach(var entry in webAssemblyData)
+  {
+    <div class="accordion-item" onclick="@IncrementClicks">
+      <h2 class="accordion-header" id="webassembly-heading-@line" @onmouseover="() => totalMouseOver++">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#webassembly-collapse-@line" aria-expanded="false" aria-controls="webassembly-collapse-@line">
+          @entry?.Item1
+        </button>
+      </h2>
+      <div id="webassembly-collapse-@line" class="accordion-collapse collapse" aria-labelledby="webassembly-heading-@line" data-bs-parent="#webassembly-accordion">
+        <div class="accordion-body">
+          @entry?.Item2
+        </div>
       </div>
     </div>
-  </div>
-  index++;
+    line++;
+  }
 }
 </div>
 
