@@ -8,32 +8,34 @@
 <Pin InnerText="Blazor can run your client-side C# code directly in the browser, using WebAssembly."></Pin>
 
 <div class="accordion" id="webassembly-accordion">
-@for(var i = 0; i < webAssemblyData?.Count; i++)
+@{ var index = 0; }
+@foreach(var entry in webAssemblyData)
 {
   <div class="accordion-item" onclick="@IncrementClicks">
-    <h2 class="accordion-header" id="webassembly-heading-@i">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#webassembly-collapse-@i" aria-expanded="false" aria-controls="webassembly-collapse-@i">
-        @webAssemblyData?[i].Item1
+    <h2 class="accordion-header" id="webassembly-heading-@index" @onmouseover="() => totalMouseOver++">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#webassembly-collapse-@index" aria-expanded="false" aria-controls="webassembly-collapse-@index">
+        @entry?.Item1
       </button>
     </h2>
-    <div id="webassembly-collapse-@i" class="accordion-collapse collapse" aria-labelledby="webassembly-heading-@i" data-bs-parent="#webassembly-accordion">
+    <div id="webassembly-collapse-@index" class="accordion-collapse collapse" aria-labelledby="webassembly-heading-@index" data-bs-parent="#webassembly-accordion">
       <div class="accordion-body">
-        @webAssemblyData?[i].Item2
+        @entry?.Item2
       </div>
     </div>
   </div>
+  index++;
 }
 </div>
 
 <div class="mt-3">
-  <p role="status">Total clicks so far: <span class="badge bg-secondary">@totalClicks</span></p>
+  <p role="status">Total clicks so far: <span class="badge bg-info">@totalClicks</span> / <span class="badge bg-secondary">@totalMouseOver</span></p>
 </div>
 
 <Offcanvas/>
 
 @code {
-  private IList<Tuple<string, string>> webAssemblyData;
-  private int totalClicks;
+  private IList<Tuple<string, string>> webAssemblyData = new List<Tuple<string, string>>();
+  private int totalClicks, totalMouseOver;
 
   protected override async Task OnInitializedAsync()
   {
