@@ -23,7 +23,7 @@
       <th scope="row">@line</th>
       <td>@clientSideFeatures[index]?.Item1</td>
       <td>@clientSideFeatures[index]?.Item2</td>
-      <td><a class="btn btn-link" href="#">Show me more</a></td>
+      <td><a class="btn btn-link" href=@($"/clientside/{index}")>Show me more</a></td>
     </tr>
   }
   </tbody>
