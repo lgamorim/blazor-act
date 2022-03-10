@@ -1,0 +1,22 @@
+﻿[
+  {
+    "Item1": "Hosting model",
+    "Item2": "Blazor WebAssembly (WASM) apps run client-side in the browser on a WebAssembly-based .NET runtime."
+  },
+  {
+    "Item1": "Compilation",
+    "Item2": "Blazor WebAssembly supports ahead-of-time (AOT) compilation, where you can compile your .NET code directly into WebAssembly."
+  },
+  {
+    "Item1": "Project structure",
+    "Item2": "The Blazor WebAssembly template creates the initial files and directory structure for a Blazor WebAssembly app."
+  },
+  {
+    "Item1": "Razor components",
+    "Item2": "Blazor apps are based on Razor components, which are a self-contained portion of user interface (UI) with processing logic to enable dynamic behavior."
+  },
+  {
+    "Item1": "JavaScript interop",
+    "Item2": "Blazor apps can invoke JavaScript (JS) functions from .NET methods and .NET methods from JS functions."
+  }
+]
