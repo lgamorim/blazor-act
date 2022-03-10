@@ -2,6 +2,18 @@
 
 <PageTitle>Client-side C# | The Blazor Act</PageTitle>
 
-<h3>@clientSideFeature?.Item1</h3>
+<h3>@clientSideFeature?.Feature</h3>
 
-<Pin InnerText="@clientSideFeature?.Item2"></Pin>
+<Pin InnerText="@clientSideFeature?.Description"></Pin>
+
+<div class="row ps-3">
+@if (clientSideFeature?.Details?.Count() > 0)
+{
+    <ul>
+    @foreach (var entry in clientSideFeature.Details)
+    {
+        <li class="py-1">@entry</li>
+    }
+    </ul>
+}
+</div>

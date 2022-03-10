@@ -1,22 +1,27 @@
 ﻿[
   {
-    "Item1": "Hosting model",
-    "Item2": "Blazor WebAssembly (WASM) apps run client-side in the browser on a WebAssembly-based .NET runtime."
+    "Feature": "Hosting model",
+    "Description": "Blazor WebAssembly (WASM) apps run client-side in the browser on a WebAssembly-based .NET runtime.",
+    "Details": [
+      "The Blazor app, its dependencies, and the .NET runtime are downloaded to the browser.",
+      "The app is executed directly on the browser UI thread; UI updates and event handling occur within the same process.",
+      "The app's assets are deployed as static files to a web server or service capable of serving static content to clients."
+    ]
   },
   {
-    "Item1": "Compilation",
-    "Item2": "Blazor WebAssembly supports ahead-of-time (AOT) compilation, where you can compile your .NET code directly into WebAssembly."
+    "Feature": "Compilation",
+    "Description": "Blazor WebAssembly supports ahead-of-time (AOT) compilation, where you can compile your .NET code directly into WebAssembly."
   },
   {
-    "Item1": "Project structure",
-    "Item2": "The Blazor WebAssembly template creates the initial files and directory structure for a Blazor WebAssembly app."
+    "Feature": "Project structure",
+    "Description": "The Blazor WebAssembly template creates the initial files and directory structure for a Blazor WebAssembly app."
   },
   {
-    "Item1": "Razor components",
-    "Item2": "Blazor apps are based on Razor components, which are a self-contained portion of user interface (UI) with processing logic to enable dynamic behavior."
+    "Feature": "Razor components",
+    "Description": "Blazor apps are based on Razor components, which are a self-contained portion of user interface (UI) with processing logic to enable dynamic behavior."
   },
   {
-    "Item1": "JavaScript interop",
-    "Item2": "Blazor apps can invoke JavaScript (JS) functions from .NET methods and .NET methods from JS functions."
+    "Feature": "JavaScript interop",
+    "Description": "Blazor apps can invoke JavaScript (JS) functions from .NET methods and .NET methods from JS functions."
   }
 ]
