@@ -1,0 +1,37 @@
+﻿@page "/javascript"
+
+<PageTitle>JavaScript | The Blazor Act</PageTitle>
+
+<h3>Interoperability with JavaScript</h3>
+
+<Pin InnerText="A Blazor app can invoke JavaScript (JS) functions from .NET methods and .NET methods from JS functions."></Pin>
+
+<ul class="nav nav-tabs" id="interop" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="invoke-js-tab" data-bs-toggle="tab" data-bs-target="#invoke-js" type="button" role="tab" aria-controls="invoke-js" aria-selected="true">Invoking JS within .NET</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="invoke-dotnet-tab" data-bs-toggle="tab" data-bs-target="#invoke-dotnet" type="button" role="tab" aria-controls="invoke-dotnet" aria-selected="false">Invoking .NET within JS</button>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane fade show active" id="invoke-js" role="tabpanel" aria-labelledby="invoke-js-tab">
+    <div class="card border-top-0">
+      <div class="card-body">
+        Call JavaScript functions from .NET methods in ASP.NET Core Blazor
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="invoke-dotnet" role="tabpanel" aria-labelledby="invoke-dotnet-tab">
+    <div class="card border-top-0">
+      <div class="card-body">
+        Call .NET methods from JavaScript functions in ASP.NET Core Blazor
+      </div>
+    </div>
+  </div>
+</div>
+
+@code {
+    
+}
