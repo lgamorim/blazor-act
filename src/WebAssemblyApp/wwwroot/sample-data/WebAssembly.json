@@ -1,7 +1,22 @@
 ﻿[
-  {"Item1":"What is WebAssembly?","Item2":"<p>WebAssembly is a low-level, assembly-like, and <b>near-native performance</b> language that can be run in modern web browsers, designed as a portable target for compilation of high-level languages like C# or Java.</p><p>It plays nicely with other technologies in the web platform and it can be faster than JavaScript in the correct use cases such as computationally intensive tasks.</p><p>WebAssembly is a <b>complement to JavaScript</b>, not a replacement.</p>"},
-  {"Item1":"What languages does WebAssembly support?","Item2":"<p><b>C#</b>, Java, TypeScript, Go, Rust, among others.</p>"},
-  {"Item1":"Why was WebAssembly created?","Item2":"<p>It's all about <b>performance</b>! Near-native performance is important in cases of porting video games, video editing, and 3D rendering to web apps.</p><p>WebAssembly was created as a <b>complement to the current web platform</b> and it aims to execute at native speed by taking advantage of common hardware capabilities available on a wide range of platforms.</p><p>Developing web apps will be more powerful and productive by writing in high-level non-JavaScript languages like C# or Java.</p>"},
-  {"Item1":"What browsers support WebAssembly?","Item2":"<p>Firefox, Chrome, Edge, Opera, Safari, and other modern web browsers.</p>"},
-  {"Item1":"What's the conclusion?","Item2":"<p>WebAssembly will play an important role in the web platform for the coming years.</p><p>It is already being used for all sorts of applications, ranging from gaming to porting desktop applications to the web, and is being used even outside the browser.</p> It will open many possibilities to enhance web performance, write web apps in multiple programming languages alongside JavaScript, and become an universal compilation target even outside the web.</p>"}
+  {
+    "Item1":"1. What is WebAssembly?",
+    "Item2":"<p>WebAssembly is a low-level, assembly-like, and <b>near-native performance</b> language that can be run in modern web browsers, designed as a portable target for compilation of high-level languages like C# or Java.</p><p>It plays nicely with other technologies in the web platform and it can be faster than JavaScript in the correct use cases such as computationally intensive tasks.</p><p>WebAssembly is a <b>complement to JavaScript</b>, not a replacement.</p>"
+  },
+  {
+    "Item1":"2. What languages does WebAssembly support?",
+    "Item2":"<p><b>C#</b>, Java, TypeScript, Go, Rust, among others.</p>"
+  },
+  {
+    "Item1":"3. Why was WebAssembly created?",
+    "Item2":"<p>It's all about <b>performance</b>! Near-native performance is important in cases of porting video games, video editing, and 3D rendering to web apps.</p><p>WebAssembly was created as a <b>complement to the current web platform</b> and it aims to execute at native speed by taking advantage of common hardware capabilities available on a wide range of platforms.</p><p>Developing web apps will be more powerful and productive by writing in high-level non-JavaScript languages like C# or Java.</p>"
+  },
+  {
+    "Item1":"4. What browsers support WebAssembly?",
+    "Item2":"<p>Firefox, Chrome, Edge, Opera, Safari, and other modern web browsers.</p>"
+  },
+  {
+    "Item1":"5. What's the conclusion?",
+    "Item2":"<p>WebAssembly will play an important role in the web platform for the coming years.</p><p>It is already being used for all sorts of applications, ranging from gaming to porting desktop applications to the web, and is being used even outside the browser.</p> It will open many possibilities to enhance web performance, write web apps in multiple programming languages alongside JavaScript, and become an universal compilation target even outside the web.</p>"
+  }
 ]
