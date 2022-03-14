@@ -19,4 +19,9 @@ public partial class ClientSideFeature
         var clientSideFeatures = await Http.GetFromJsonAsync<IList<ClientSideFeatureDetail>>("sample-data/ClientSide.json");
         clientSideFeature = clientSideFeatures?[Index];
     }
+
+    private MarkupString GetDescription(int index)
+    {
+        return new MarkupString(clientSideFeature?.Details?[index] ?? string.Empty);
+    }
 }

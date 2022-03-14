@@ -6,15 +6,23 @@
 
 <Pin InnerText="@clientSideFeature?.Description"></Pin>
 
-<div class="row ps-3 pb-2">
-@if (clientSideFeature?.Details?.Count() > 0)
-{
-    <ul>
-    @foreach (var entry in clientSideFeature.Details)
+<table class="table align-middle">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">How it works</th>
+    </tr>
+    </thead>
+    <tbody>
+    @for (var index = 0; index < clientSideFeature?.Details?.Count; index++)
     {
-        <li class="py-1">@entry</li>
+        var line = index + 1;
+        <tr>
+            <th scope="row">@line</th>
+            <td>@GetDescription(index)</td>
+        </tr>
     }
-    </ul>
-}
-</div>
+    </tbody>
+</table>
+<br/>
 <a type="button" class="btn btn-outline-primary" href="/clientside">Go Back</a>
