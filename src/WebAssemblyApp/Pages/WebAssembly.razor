@@ -20,7 +20,7 @@
       </h2>
       <div id="webassembly-collapse-@line" class="accordion-collapse collapse" aria-labelledby="webassembly-heading-@line" data-bs-parent="#webassembly-accordion">
         <div class="accordion-body">
-          @entry?.Item2
+          @GetBody(entry?.Item2)
         </div>
       </div>
     </div>
@@ -42,6 +42,11 @@
   protected override async Task OnInitializedAsync()
   {
     webAssemblyData = await Http.GetFromJsonAsync<IList<Tuple<string, string>>>("sample-data/WebAssembly.json");
+  }
+
+  private MarkupString GetBody(string body)
+  {
+    return new MarkupString(body);
   }
 
   private void IncrementClicks()
