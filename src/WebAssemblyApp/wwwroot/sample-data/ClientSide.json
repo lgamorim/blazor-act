@@ -45,10 +45,8 @@
     "Feature": "JavaScript interop",
     "Description": "Blazor apps can invoke JavaScript (JS) functions from .NET methods and .NET methods from JS functions.",
     "Details": [
-      "Blazor uses JavaScript to bootstrap the .NET runtime and is capable of using any JS library.",
-      "C# code can call a JS function/API and JS code can call any C# methods, whether instance or static.",
-      "Blazor maintains representations of the DOM and interacts directly with DOM objects.",
-      "Blazor uses JavaScript interoperability (JS Interop) to handle DOM manipulation and browser API calls.",
+      "Blazor uses JavaScript to bootstrap the .NET runtime and is capable of using any JS library (C# code can call a JS function and JS code can call any C# methods).",
+      "Blazor maintains representations of the DOM and interacts directly with DOM objects through JavaScript interoperability (JS interop).",
       "JS interop calls are asynchronous by default, regardless of whether the called code is synchronous or asynchronous."
     ]
   }
