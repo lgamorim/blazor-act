@@ -1,14 +1,14 @@
 ﻿{
   "requirements": {
-    "Item1": "Requirements",
+    "Item1": "1. Requirements",
     "Item2": "<p>Blazor apps are composed of reusable web UI components implemented using C#, HTML, and CSS.</p><ul><li>Basic knowledge of <mark>HTML</mark> and <mark>CSS</mark> (Bootstrap).</li><li>Familiarity with <mark>C#</mark>.</li><li>Some <mark>Razor</mark> knowledge.</li></ul>"
   },
   "project-structure": {
-    "Item1": "App/Demo structure",
+    "Item1": "2. App/Demo structure",
     "Item2": "<p>Let's take a look at the structure of this Blazor app to understand how the demo will unfold.</p><ul><li><mark>WebAssembly</mark> in modern web browsers.</li><li>Writing <mark>client-side C#</mark> code.</li><li>Sharing code and libraries with <mark>.NET Standard</mark>.</li><li>Interoperability with <mark>JavaScript</mark>.</li></ul>"
   },
   "blazor-flavors": {
-    "Item1": "Flavors of Blazor",
+    "Item1": "3. Flavors of Blazor",
     "Item2": "<p>Run on WebAssembly or the server.</p><ul><li>Blazor App WebAssembly (client-side).</li><li>ASP.NET Blazor App (server-side).</li></ul>"
   }
 }
