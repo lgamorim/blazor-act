@@ -10,18 +10,46 @@
   },
   {
     "Feature": "Compilation",
-    "Description": "Blazor WebAssembly supports ahead-of-time (AOT) compilation, where you can compile your .NET code directly into WebAssembly."
+    "Description": "Blazor WebAssembly supports ahead-of-time (AOT) compilation, where you can compile your .NET code directly into WebAssembly.",
+    "Details": [
+      "AOT compilation results in runtime performance improvements at the expense of a larger app size.",
+      "Blazor WebAssembly includes support for trimming unused code from .NET Core framework libraries.",
+      "Blazor WebAssembly apps can use native dependencies built to run on WebAssembly."
+    ]
   },
   {
     "Feature": "Project structure",
-    "Description": "The Blazor WebAssembly template creates the initial files and directory structure for a Blazor WebAssembly app."
+    "Description": "The Blazor WebAssembly template creates the initial files and directory structure for a Blazor WebAssembly app.",
+    "Details": [
+      "The <code>Pages</code> folder contains the routable components/pages (.razor) that make up the Blazor app.",
+      "The <code>Shared</code> folder contains any shared components and stylesheets.",
+      "<code>wwwroot</code> is the web root folder for the app containing the app's public static assets.",
+      "The <code>index.html</code> webpage is the root page of the app implemented as an HTML page.",
+      "<code>_Imports.razor</code> includes common Razor directives to include in the app's components (.razor), such as <code>@using</code> directives for namespaces.",
+      "<code>App.razor</code> is the root component of the app that sets up client-side routing using the Router component.",
+      "<code>Program.cs</code> is the app's entry point that sets up the WebAssembly host."
+    ]
   },
   {
     "Feature": "Razor components",
-    "Description": "Blazor apps are based on Razor components, which are a self-contained portion of user interface (UI) with processing logic to enable dynamic behavior."
+    "Description": "Blazor apps are based on Razor components, which are a self-contained portion of user interface (UI) with processing logic to enable dynamic behavior.",
+    "Details": [
+      "Components are implemented using a combination of C# and HTML markup in Razor component files with the <code>.razor</code> file extension.",
+      "When an app is compiled, the HTML markup and C# rendering logic are converted into a component class, whose name of the generated class matches the name of the file.",
+      "Members of the component class are defined in one or more <code>@code</code> blocks, where the component state is specified and processed with C#.",
+      "Two Razor features are extensively used by components, <i>directives</i> and <i>directive attributes</i>, which are reserved keywords prefixed with <code>@</code> that appear in Razor markup.",
+      "Components can be nested, reused, shared among projects, and used in MVC and Razor Pages apps."
+    ]
   },
   {
     "Feature": "JavaScript interop",
-    "Description": "Blazor apps can invoke JavaScript (JS) functions from .NET methods and .NET methods from JS functions."
+    "Description": "Blazor apps can invoke JavaScript (JS) functions from .NET methods and .NET methods from JS functions.",
+    "Details": [
+      "Blazor uses JavaScript to bootstrap the .NET runtime and is capable of using any JS library.",
+      "C# code can call a JS function/API and JS code can call any C# methods, whether instance or static.",
+      "Blazor maintains representations of the DOM and interacts directly with DOM objects.",
+      "Blazor uses JavaScript interoperability (JS Interop) to handle DOM manipulation and browser API calls.",
+      "JS interop calls are asynchronous by default, regardless of whether the called code is synchronous or asynchronous."
+    ]
   }
 ]
