@@ -37,13 +37,13 @@
   <div class="tab-pane fade" id="invoke-dotnet" role="tabpanel" aria-labelledby="invoke-dotnet-tab">
     <div class="card border-top-0">
       <div class="card-body">
-        <p>To call .NET <b>static</b> methods from JavaScript functions in ASP.NET Core Blazor, use the JS functions <code>DotNet.invokeMethod</code> or <code>DotNet.invokeMethodAsync</code>.</p>
+        <p>To call .NET <strong>static</strong> methods from JavaScript functions in ASP.NET Core Blazor, use the JS functions <code>DotNet.invokeMethod</code> or <code>DotNet.invokeMethodAsync</code>.</p>
         <p>Pass in the name of the assembly containing the method, the identifier of the static .NET method, and any arguments.</p>
         <hr/>
-        <p>To call .NET <b>instance</b> methods from JavaScript functions in ASP.NET Core Blazor:</p>
+        <p>To call .NET <strong>instance</strong> methods from JavaScript functions in ASP.NET Core Blazor:</p>
         <ul>
           <li>
-            Pass the .NET instance by reference to JS by wrapping the instance in a <code>DotNetObjectReference</code> and calling Create on it.
+            Pass the .NET instance by reference to JS by wrapping the instance in a <code>DotNetObjectReference</code> and calling <code>Create</code> on it.
           </li>
           <li>
             Invoke a .NET instance method from JS using <code>invokeMethod</code> or <code>invokeMethodAsync</code> from the passed <code>DotNetObjectReference</code>.

@@ -36,8 +36,6 @@
     "Details": [
       "Components are implemented using a combination of C# and HTML markup in Razor component files with the <code>.razor</code> file extension.",
       "When an app is compiled, the HTML markup and C# rendering logic are converted into a component class, whose name of the generated class matches the name of the file.",
-      "Members of the component class are defined in one or more <code>@code</code> blocks, where the component state is specified and processed with C#.",
-      "Two Razor features are extensively used by components, <i>directives</i> and <i>directive attributes</i>, which are reserved keywords prefixed with <code>@</code> that appear in Razor markup.",
       "Components can be nested, reused, shared among projects, and used in MVC and Razor Pages apps."
     ]
   },
@@ -47,7 +45,7 @@
     "Details": [
       "Blazor uses JavaScript to bootstrap the .NET runtime and is capable of using any JS library (C# code can call a JS function and JS code can call any C# methods).",
       "Blazor maintains representations of the DOM and interacts directly with DOM objects through JavaScript interoperability (JS interop).",
-      "JS interop calls are asynchronous by default, regardless of whether the called code is synchronous or asynchronous."
+      "JS interop calls are asynchronous by default, regardless of whether the called code is synchronous or asynchronous, to ensure that components are compatible across both Blazor hosting models."
     ]
   }
 ]
