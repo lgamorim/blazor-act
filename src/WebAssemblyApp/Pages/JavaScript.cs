@@ -33,13 +33,4 @@ public partial class JavaScript
 
         await JS.InvokeVoidAsync("displayChart", interopChart, prices, days);
     }
-    
-    [JSInvokable]
-    public async Task<bool> PingCoinGeckoApi()
-    {
-        const string apiUrl = "https://api.coingecko.com/api/v3/ping";
-        var response = await Http.GetAsync(apiUrl);
-        
-        return response.IsSuccessStatusCode;
-    }
 }
