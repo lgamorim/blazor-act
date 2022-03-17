@@ -1,4 +1,5 @@
 ﻿@page "/javascript"
+@implements IDisposable
 
 <PageTitle>JavaScript | The Blazor Act</PageTitle>
 
@@ -12,6 +13,9 @@
   </li>
   <li class="nav-item" role="presentation">
     <button class="nav-link" id="invoke-dotnet-tab" data-bs-toggle="tab" data-bs-target="#invoke-dotnet" type="button" role="tab" aria-controls="invoke-dotnet" aria-selected="false">Invoking .NET within JS</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="interop-playground-tab" data-bs-toggle="tab" data-bs-target="#interop-playground" type="button" role="tab" aria-controls="interop-playground" aria-selected="false">Interop Playground</button>
   </li>
 </ul>
 
@@ -55,8 +59,44 @@
       </div>
     </div>
   </div>
+  <div class="tab-pane fade" id="interop-playground" role="tabpanel" aria-labelledby="interop-playground-tab">
+    <div class="card border-top-0">
+      <div class="card-body">
+        <p>The following example calls <em><b>1)</b></em> the <code>GetMarketData</code> .NET method from JS, and <em><b>2)</b></em> the <code>displayChart</code> JS function from .NET!</p>
+        <form>
+          <div class="row">
+            <div class="col-md-2 mb-3">
+              <input type="text" class="form-control" id="fc-coin" placeholder="Coin">
+            </div>
+            <div class="col-md-1 mb-3">
+              <input type="text" class="form-control" id="fc-currency" placeholder="Currency">
+            </div>
+            <div class="col-auto mb-3">
+              <button class="btn btn-outline-primary" type="button" @onclick="SetupCallCoinGeckoApiReference">Interop, Rise!</button>
+            </div>
+          </div>
+        </form>
+        <div class="row mt-2">
+          <canvas id="interop-chart" @ref="interopChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
+<Offcanvas/>
+
 @code {
-    
+  private DotNetObjectReference<JavaScript> dotNetRef;
+
+  private async Task SetupCallCoinGeckoApiReference()
+  {
+    dotNetRef = DotNetObjectReference.Create(this);
+    await JS.InvokeVoidAsync("callCoinGeckoApi", dotNetRef);
+  }
+
+  public void Dispose()
+  {
+    dotNetRef?.Dispose();
+  }
 }
