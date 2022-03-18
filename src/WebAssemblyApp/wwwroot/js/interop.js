@@ -30,8 +30,8 @@ window.displayChart = (canvas, prices, days) => {
 }
 
 window.callCoinGeckoApi = (dotNetRef) => {
-    let coin = document.getElementById("fc-coin").value;
-    let currency = document.getElementById("fc-currency").value;
+    let coin = $("#fc-coin").val();
+    let currency = $("#fc-currency").val();
 
     return dotNetRef.invokeMethodAsync("GetMarketData", coin, currency)
 }
