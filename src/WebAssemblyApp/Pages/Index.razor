@@ -46,7 +46,13 @@
   </div>
 </div>
 
-<Offcanvas/>
+<Offcanvas>
+  <ul>
+    <li>Razor markup for embedding .NET based code into webpages.</li>
+    <li>The <code>@@code</code> directive for defining members of the component class.</li>
+    <li>The <code>@@page</code> directive for routing and navigation.</li>
+  </ul>
+</Offcanvas>
 
 @code {
   private IDictionary<string, Tuple<string, string>> overviewData;
