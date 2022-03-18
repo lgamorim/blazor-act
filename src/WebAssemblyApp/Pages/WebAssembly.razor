@@ -33,7 +33,13 @@
   <p role="status">Events fired: <span class="badge bg-info">@totalClicks</span> / <span class="badge bg-secondary">@totalMouseOver</span></p>
 </div>
 
-<Offcanvas/>
+<Offcanvas>
+  <ul>
+    <li>The Razor <em>directives</em> and <em>directive attributes</em> used by components.</li>
+    <li>How to inject services into components.</li>
+    <li>How to include other components by declaring them using HTML syntax.</li>
+  </ul>
+</Offcanvas>
 
 @code {
   private IList<Tuple<string, string>> webAssemblyData = new List<Tuple<string, string>>();
