@@ -1,4 +1,6 @@
 ﻿@page "/netstandard"
+@using System.Net
+@using System.Net.Sockets
 
 <PageTitle>.NET Standard | The Blazor Act</PageTitle>
 
@@ -49,7 +51,7 @@
 </div>
 <div class="row mt-2">
   <div class="col-sm-12 text-center">
-    <button class="btn btn-outline-danger" type="button">Try black magic</button>
+    <button class="btn btn-outline-danger" type="button" @onclick="TryBlackMagic">Try Black Magic</button>
   </div>
 </div>
 
@@ -60,5 +62,13 @@
 </Offcanvas>
 
 @code {
+  private static void TryBlackMagic()
+  {
+    var hostEntry = Dns.GetHostEntry("localhost");
+    var ipAddress = hostEntry.AddressList[0];
+    var localEndPoint = new IPEndPoint(ipAddress, 11000);
     
+    var listener = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+    listener.Bind(localEndPoint);
+  }
 }
