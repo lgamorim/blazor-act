@@ -31,6 +31,7 @@ public partial class JavaScript
         var days = data.Prices.Select(price => DateTimeOffset.FromUnixTimeMilliseconds((long)price[0]).ToString("d")).ToList();
         var prices = data.Prices.Select(price => price[1]).ToList();
 
-        await JS.InvokeVoidAsync("displayChart", interopChart, prices, days);
+        var dataset = new { Prices = prices, Days = days, Coin = coin, Currency = currency.ToUpperInvariant() };
+        await JS.InvokeVoidAsync("displayChart", interopChart, dataset);
     }
 }
