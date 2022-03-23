@@ -1,5 +1,5 @@
 ﻿let chart;
-window.displayChart = (canvas, prices, days) => {
+window.displayChart = (canvas, dataset) => {
     if(chart) {
         chart.destroy();
     }
@@ -8,10 +8,10 @@ window.displayChart = (canvas, prices, days) => {
     chart = new Chart(context, {
         type: 'line',
         data: {
-            labels: days,
+            labels: dataset.days,
             datasets: [{
-                label: 'Price',
-                data: prices,
+                label: dataset.coin + ' / ' + dataset.currency,
+                data: dataset.prices,
                 backgroundColor: 'rgba(0, 102, 204, 0.85)',
                 borderColor: 'rgba(0, 102, 204, 0.85)',
                 borderWidth: 1
